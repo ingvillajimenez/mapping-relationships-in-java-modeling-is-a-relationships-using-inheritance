@@ -1,8 +1,7 @@
 package com.skillsoft.inheritanceandinterfaces;
 
-public class Book {
-
-    private String bindingType = "Paperback";
+public class Book extends Object {
+    public String bindingType = "Paperback";
 
     public String getBindingType() {
         return bindingType;
