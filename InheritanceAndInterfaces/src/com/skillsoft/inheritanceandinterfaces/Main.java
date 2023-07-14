@@ -1,30 +1,47 @@
 package com.skillsoft.inheritanceandinterfaces;
 
-import java.util.Date;
-
 public class Main {
     public static void main(String[] args) {
 
         Book headFirstJava = new Book();
-        String string = new String("A string");
-        Date date = new Date("7/11/2021");
-        Object object = new Object();
+        Book effectiveJava = new Book();
+        Book javaCookbook = new Book();
 
         System.out.println("Is headFirstJava an instance of Book Class?: " + (headFirstJava instanceof Book));
-        System.out.println("Is string an instance of String Class?: " + (string instanceof String));
-        System.out.println("Is date an instance of Date Class?: " + (date instanceof Date));
-        System.out.println("Is object an instance of Object Class?: " + (object instanceof Object));
+        System.out.println("Is effectiveJava an instance of Book Class?: " + (effectiveJava instanceof Book));
+        System.out.println("Is javaCookbook an instance of Book Class?: " + (javaCookbook instanceof Book));
 
-        System.out.println("\nIs object an instance of Book Class?: " + (object instanceof Book));
-        System.out.println("Is object an instance of String Class?: " + (object instanceof String));
-        System.out.println("Is object an instance of Date Class?: " + (object instanceof Date));
+        System.out.println();
 
-        System.out.println("\nIs headFirstJava an instance of Object Class?: " + (headFirstJava instanceof Object));
-        System.out.println("Is string an instance of Object Class?: " + (string instanceof Object));
-        System.out.println("Is date an instance of Object Class?: " + (date instanceof Object));
+        System.out.println("Is headFirstJava an instance of Object Class?: " + (headFirstJava instanceof Object));
+        System.out.println("Is effectiveJava an instance of Object Class?: " + (effectiveJava instanceof Object));
+        System.out.println("Is javaCookbook an instance of Object Class?: " + (javaCookbook instanceof Object));
 
-//        System.out.println("\nIs headFirstJava an instance of String Class?: " + (headFirstJava instanceof String));
-//        System.out.println("\nIs date an instance of String Class?: " + (date instanceof String));
-//        System.out.println("Is string an instance of Book Class?: " + (string instanceof Book));
+        System.out.println();
+
+        Object headFirstJavaObject = headFirstJava;
+        Object effectiveJavaObject = effectiveJava;
+        Object javaCookbookObject = javaCookbook;
+
+        System.out.println("Is headFirstJavaObject an instance of Book Class?: " +
+                (headFirstJavaObject instanceof Book));
+        System.out.println("Is effectiveJavaObject an instance of Book Class?: " +
+                (effectiveJavaObject instanceof Book));
+        System.out.println("Is javaCookObject an instance of Book Class?: " +
+                (javaCookbookObject instanceof Book));
+
+        System.out.println();
+
+        System.out.println("headFirstJava's class: " + headFirstJava.getClass());
+        System.out.println("effectiveJava's class: " + effectiveJava.getClass());
+        System.out.println("javaCookbook's class: " + javaCookbook.getClass());
+
+        System.out.println();
+
+        System.out.println("headFirstJavaObject's class: " + headFirstJavaObject.getClass());
+        System.out.println("effectiveJavaObject's class: " + effectiveJavaObject.getClass());
+        System.out.println("javaCookbookObject's class: " + javaCookbookObject.getClass());
+
+        System.out.println();
     }
 }
