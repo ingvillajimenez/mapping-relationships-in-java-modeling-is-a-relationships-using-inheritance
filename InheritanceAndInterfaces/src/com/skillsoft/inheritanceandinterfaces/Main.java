@@ -4,50 +4,35 @@ public class Main {
     public static void main(String[] args) {
 
         NonFictionBook sapiens = new NonFictionBook();
-        Book book = new NonFictionBook();
-        Object object = new NonFictionBook();
+        Book sapiensBook = sapiens;
+        Object sapiensObject = sapiens;
 
-        System.out.println("sapiens is instance of NonFictionBook: " + (sapiens instanceof NonFictionBook));
-        System.out.println("sapiens is instance of Book: " + (sapiens instanceof Book));
-        System.out.println("sapiens is instance of Object: " + (sapiens instanceof Object));
-
-        System.out.println("\nbook is instance of NonFictionBook: " + (book instanceof NonFictionBook));
-        System.out.println("book is instance of Book: " + (book instanceof Book));
-        System.out.println("book is instance of Object: " + (book instanceof Object));
-
-        System.out.println("\nobject is instance of NonFictionBook: " + (object instanceof NonFictionBook));
-        System.out.println("object is instance of Book: " + (object instanceof Book));
-        System.out.println("object is instance of Object: " + (object instanceof Object));
+        System.out.println("sapiens class: " + sapiens.getClass());
+        System.out.println("sapiensBook class: " + sapiensBook.getClass());
+        System.out.println("sapiensObject class: " + sapiensObject.getClass());
 
         System.out.println();
 
-        sapiens.checkOutBook();
-        sapiens.displayType();
+        Book onTheOriginOfSpeciesBook = new NonFictionBook();
+
+        NonFictionBook onTheOriginOfSpecies = (NonFictionBook) onTheOriginOfSpeciesBook;
+        Object onTheOriginOfSpeciesObject = onTheOriginOfSpeciesBook;
+
+        System.out.println("onTheOriginOfSpecies class: " + onTheOriginOfSpecies.getClass());
+        System.out.println("onTheOriginOfSpeciesBook class: " + onTheOriginOfSpeciesBook.getClass());
+        System.out.println("onTheOriginOfSpeciesObject class: " + onTheOriginOfSpeciesObject.getClass());
 
         System.out.println();
 
-        book.checkOutBook();
-        ((NonFictionBook) book).displayType();
+        Object effectiveJavaObject = new NonFictionBook();
 
-        ((Book) object).checkOutBook();
-        ((NonFictionBook) object).displayType();
+        Book effectiveJavaBook = (Book) effectiveJavaObject;
+        NonFictionBook effectiveJava = (NonFictionBook) effectiveJavaObject;
 
-//        Book headFirstJava = new Book();
-//        NonFictionBook sapiens = new NonFictionBook();
-//
-//        System.out.println("headFirstJava binding type: " + headFirstJava.getBindingType());
-//        headFirstJava.checkOutBook();
-//
-//        System.out.println("sapiens binding type: " + sapiens.getBindingType());
-//        sapiens.checkOutBook();
-//
-//        System.out.println();
-//
-//        System.out.println("\nsapiens subject: " + sapiens.getSubject());
-//        sapiens.displayType();
-//
-//        System.out.println("\nheadFirstJava subject: " + headFirstJava.getSubject());
-//        headFirstJava.displayType();
+        System.out.println("effectiveJava class: " + effectiveJava.getClass());
+        System.out.println("effectiveJavaBook class: " + effectiveJavaBook.getClass());
+        System.out.println("effectiveJavaObject class: " + effectiveJavaObject.getClass());
 
+        System.out.println();
     }
 }
