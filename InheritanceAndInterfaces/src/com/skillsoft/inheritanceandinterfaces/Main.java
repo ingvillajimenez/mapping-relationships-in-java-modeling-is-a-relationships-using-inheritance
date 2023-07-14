@@ -3,36 +3,40 @@ package com.skillsoft.inheritanceandinterfaces;
 public class Main {
     public static void main(String[] args) {
 
-        Book headFirstJava = new Book();
-        System.out.println("headFirstJava binding type: " + headFirstJava.getBindingType());
-        headFirstJava.checkOutBook();
+        NonFictionBook sapiens = new NonFictionBook();
+        NonFictionBook onTheOriginOfSpecies = new NonFictionBook();
+
+        System.out.println("sapiens subject: " + sapiens.getSubject());
+        sapiens.displayType();
+
+        System.out.println("onTheOriginOfSpecies subject: " + onTheOriginOfSpecies.getSubject());
+        onTheOriginOfSpecies.displayType();
 
         System.out.println();
 
-        Book effectiveJava = new Book();
-        System.out.println("effectiveJava binding type: " + effectiveJava.getBindingType());
-        effectiveJava.checkOutBook();
+        System.out.println("sapiens binding type: " + sapiens.getBindingType());
+        sapiens.checkOutBook();
+
+        System.out.println("onTheOriginOfSpecies binding type: " + onTheOriginOfSpecies.getBindingType());
+        onTheOriginOfSpecies.checkOutBook();
 
         System.out.println();
 
-        System.out.println("headFirstJava's class: " + headFirstJava.getClass());
-        System.out.println("effectiveJava's class: " + effectiveJava.getClass());
+        System.out.println("sapiens's class: " + sapiens.getClass());
+        System.out.println("onTheOriginOfSpecies's class: " + onTheOriginOfSpecies.getClass());
 
-        System.out.println();
-
-        Object headFirstJavaObject = headFirstJava;
-        Object effectiveJavaObject = effectiveJava;
-
-        System.out.println("headFirstJavaObject's class: " + headFirstJavaObject.getClass());
-        System.out.println("effectiveJavaObject's class: " + effectiveJavaObject.getClass());
-
-        System.out.println();
-
-        System.out.println("headFirstJava binding type: " + headFirstJavaObject.getBindingType());
-        headFirstJavaObject.checkOutBook();
-
-        System.out.println("effectiveJava binding type: " + effectiveJavaObject.getBindingType());
-        effectiveJavaObject.checkOutBook();
-
+//        System.out.println("\nsapiens instanceof NonFictionBook: " +
+//                (sapiens instanceof NonFictionBook));
+//        System.out.println("sapiens instanceof Book: " +
+//                (sapiens instanceof Book));
+//        System.out.println("sapiens instanceof Object: " +
+//                (sapiens instanceof Object));
+//
+//        System.out.println("\nonTheOriginOfSpecies instanceof NonFictionBook: " +
+//                (onTheOriginOfSpecies instanceof NonFictionBook));
+//        System.out.println("onTheOriginOfSpecies instanceof Book: " +
+//                (onTheOriginOfSpecies instanceof Book));
+//        System.out.println("onTheOriginOfSpecies instanceof Object: " +
+//                (onTheOriginOfSpecies instanceof Object));
     }
 }
